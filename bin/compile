@@ -1,10 +1,10 @@
 #!/bin/bash
 
 echo "HIIIIIIIIIIIII"
-ls $1
+ls -al $1
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$1/librsync
 echo $LD_LIBRARY_PATH
 
-export LIBRARY_PATH=$LD_LIBRARY_PATH:$1/librsync
+export LIBRARY_PATH=$LIBRARY_PATH:$1/librsync
 echo $LIBRARY_PATH
