@@ -3,6 +3,9 @@
 echo "HIIIIIIIIIIIII"
 ls -al $1
 
+mkdir $1/.bundle
+cp .heroku_config/config $1/.bundle
+
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH$1/librsync
 echo $LD_LIBRARY_PATH
 
