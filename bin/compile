@@ -9,11 +9,8 @@ sed -i "s,/app,$1,g" $1/.bundle/config
 
 cat $1/.bundle/config
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH$1/librsync
+export LD_LIBRARY_PATH=$1/librsync.a:$1/librsync
 echo $LD_LIBRARY_PATH
 
-export LIBRARY_PATH=$LIBRARY_PATH$1/librsync
+export LIBRARY_PATH=$1/librsync.a:$1/librsync
 echo $LIBRARY_PATH
-
-cd $1
-bundle install
