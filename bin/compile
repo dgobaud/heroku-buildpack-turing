@@ -3,8 +3,8 @@
 echo "HIIIIIIIIIIIII"
 
 pwd
-ls $CACHE_DIR/.bundle
+ls $2/.bundle
 
-rm -f $CACHE_DIR/.bundle
-cp -v -R $BUILD_DIR/.heroku_bundle $BUILD_DIR/.bundle
-sed -i "s,/app,$BUILD_DIR,g" $BUILD_DIR/.bundle/config
+rm -f $2/.bundle
+cp -v -R $1/.heroku_bundle $1/.bundle
+sed -i "s,/app,$1,g" $1/.bundle/config
