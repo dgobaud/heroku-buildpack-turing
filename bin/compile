@@ -1,10 +1,7 @@
 #!/bin/bash
 
 echo "HIIIIIIIIIIIII"
-
-pwd
-ls $2/.bundle
-
-rm -f $2/.bundle
-cp -v -R $1/.heroku_bundle $1/.bundle
-sed -i "s,/app,$1,g" $1/.bundle/config
+ls $1
+echo $LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$1
+echo $LD_LIBRARY_PATH
